@@ -1,59 +1,59 @@
 def rate(phrase):
     base = 0
     for letter in phrase:
-        if letter == "A" or letter == "a":
+        if letter == "A":
             base += 1
-        if letter == "B" or letter == "b":
+        if letter == "B":
             base += 2
-        if letter == "C" or letter == "c":
+        if letter == "C":
             base += 3
-        if letter == "D" or letter == "d":
+        if letter == "D":
             base += 4
-        if letter == "E" or letter == "e":
+        if letter == "E":
             base += 5
-        if letter == "F" or letter == "f":
+        if letter == "F":
             base += 6
-        if letter == "G" or letter == "g":
+        if letter == "G":
             base += 7
-        if letter == "H" or letter == "h":
+        if letter == "H":
             base += 8
-        if letter == "I" or letter == "i":
+        if letter == "I":
             base += 9
-        if letter == "J" or letter == "j":
+        if letter == "J":
             base += 10
-        if letter == "K" or letter == "k":
+        if letter == "K":
             base += 11
-        if letter == "L" or letter == "l":
+        if letter == "L":
             base += 12
-        if letter == "M" or letter == "m":
+        if letter == "M":
             base += 13
-        if letter == "N" or letter == "n":
+        if letter == "N":
             base += 14
-        if letter == "O" or letter == "o":
+        if letter == "O":
             base += 15
-        if letter == "P" or letter == "p":
+        if letter == "P":
             base += 16
-        if letter == "Q" or letter == "q":
+        if letter == "Q":
             base += 17
-        if letter == "R" or letter == "r":
+        if letter == "R":
             base += 18
-        if letter == "S" or letter == "s":
+        if letter == "S":
             base += 19
-        if letter == "T" or letter == "t":
+        if letter == "T":
             base += 20
-        if letter == "U" or letter == "u":
+        if letter == "U":
             base += 21
-        if letter == "V" or letter == "v":
+        if letter == "V":
             base += 22
-        if letter == "W" or letter == "w":
+        if letter == "W":
             base += 23
-        if letter == "X" or letter == "x":
+        if letter == "X":
             base += 24
-        if letter == "Y" or letter == "y":
+        if letter == "Y":
             base += 25
-        if letter == "Z" or letter == "z":
+        if letter == "Z":
             base += 26
     print("Your sexiness is", str(base) + "!")
 
 person = input("Enter name of person: ")
-rate(person)
+rate(person.upper())
