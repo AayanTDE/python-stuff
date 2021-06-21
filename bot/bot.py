@@ -19,5 +19,6 @@ async def on_ready():
 
 bot.load_extension("repeat")
 bot.load_extension("trolling")
+bot.load_extension("rps")
 
 bot.run(token)
