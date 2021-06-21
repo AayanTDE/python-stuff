@@ -23,6 +23,10 @@ class repeat(commands.Cog):
             return
         await ctx.send(arg)
 
+    @commands.command(name="spam")
+    async def spam(self, ctx, arg, count):
+        await ctx.send(arg * int(count))
+
 
 def setup(bot: commands.Bot):
     bot.add_cog(repeat(bot))
