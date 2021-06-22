@@ -22,5 +22,6 @@ bot.load_extension("trolling")
 bot.load_extension("rps")
 bot.load_extension("owo")
 bot.load_extension("rater")
+bot.load_extension("embed")
 
 bot.run(token)
