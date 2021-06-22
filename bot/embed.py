@@ -5,7 +5,7 @@ class owo(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    @commands.command(name="rep summary")
+    @commands.command(name="reps")
     async def test(self, ctx):
         embed=discord.Embed(title=" ", color=0x605ac6)
         embed.set_author(name=f"Reputation Summary - {ctx.author.name}", icon_url=ctx.author.avatar_url)
