@@ -1,7 +1,7 @@
 from discord.ext import commands
 
 def char_to_numb(char):
-    if char in "qwertyuiopasdfghjklzxcvbnm":
+    if char in "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM":
         return ord(char[0]) - 96
     elif char == " ":
         return 0
