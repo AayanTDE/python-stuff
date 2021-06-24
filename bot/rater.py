@@ -1,7 +1,7 @@
 from discord.ext import commands
 
 def char_to_numb(char):
-    if char in "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM":
+    if char in "qwertyuiopasdfghjklzxcvbnm":
         return ord(char[0]) - 96
     elif char == " ":
         return 0
@@ -14,7 +14,7 @@ class rater(commands.Cog):
 
     def rate(phrase):
         base = 0
-        for i in phrase:
+        for i in phrase.lower():
             base += char_to_numb(i)
         return base
     @commands.command(name="rateme", aliases=["rate", "rater"])
