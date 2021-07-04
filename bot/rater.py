@@ -19,7 +19,7 @@ class rater(commands.Cog):
         return base
     @commands.command(name="rateme", aliases=["rate", "rater"])
     async def rateme(self, ctx, *, arg: rate):
-        await ctx.send(f"Your rating is {arg}!")
+        await ctx.reply(f"Your rating is {arg}!")
 
 
 def setup(bot: commands.Bot):
