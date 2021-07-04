@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 #from dislash import *
-from util.config import token
+from util.secret_config import token
 
 bot = commands.Bot(command_prefix="o ")
 #slash = SlashClient(bot)
