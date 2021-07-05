@@ -25,7 +25,6 @@ bot.load_extension("rand")
 bot.load_extension("owo")
 bot.load_extension("rater")
 bot.load_extension("embed")
-bot.load_extension("eval")
 bot.load_extension("skyblock")
 
 bot.run(token)
