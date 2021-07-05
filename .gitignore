@@ -1,3 +1,11 @@
+# file which has token and api key
+secret_config.py
+
+# my testing stuff
+test.py
+
+# REST OF THE FILE IS THE PYTHON TEMPLATE
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
