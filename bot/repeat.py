@@ -48,7 +48,10 @@ class repeat(commands.Cog):
     @commands.command(name="spam")
     async def spam(self, ctx, arg, count):
         if ctx.message.author.id in whitelist:
-            for i in range(int(count)):
+            if "305299176470872064" in arg:
+                await ctx.send("Please dont ping Jag he's so attractive")
+            else:
+                for i in range(int(count)):
                     await ctx.send(arg)
         else:
             await ctx.reply("You are not whitelisted to use this command!")
