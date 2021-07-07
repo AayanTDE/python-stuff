@@ -141,7 +141,7 @@ Fortune from farming skill: {farming_level * 4}\n\
 Fortune from Anita bonus: {anita * 2}\n\
 Fortune from elephant: {pet_level * 1.8}\n\
 Fortune from wart hoe: {hoe_ff}\n\
-You should be getting {wart_coins} coins from one block of warts!\n")
+You should be getting {round(wart_coins, 1)} coins from one block of warts!\n")
 
 def setup(bot: commands.Bot):
     bot.add_cog(skyblock(bot))
