@@ -1,3 +1,4 @@
+from discord import Member
 from discord.ext import commands
 
 
@@ -32,6 +33,13 @@ class repeat(commands.Cog):
         if ctx.author.id in blacklist:
             return
         await ctx.send(arg.upper())
+
+    @commands.command(name="pm")
+    @commands.is_owner()
+    async def pm(self, ctx, user: Member, *, message):
+        await user.send(message)
+        await ctx.send(f"Message sent to {user.mention} successfully\nMessage: `{message}`")
+
 
     @commands.command(name="spam")
     async def spam(self, ctx, arg, count):
