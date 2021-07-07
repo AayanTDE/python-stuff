@@ -1,6 +1,6 @@
 from discord import Member
 from discord.ext import commands
-
+from util.shit import lyrics
 
 blacklist = [
     466522885536612353 # sigma
@@ -40,6 +40,10 @@ class repeat(commands.Cog):
         await user.send(message)
         await ctx.send(f"Message sent to {user.mention} successfully\nMessage: `{message}`")
 
+    @commands.command(name="Obie", aliases=["obie"])
+    async def Obie(self, ctx):
+        for i in lyrics:
+            await ctx.send(i)
 
     @commands.command(name="spam")
     async def spam(self, ctx, arg, count):
