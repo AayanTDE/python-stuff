@@ -13,7 +13,8 @@ class skyblock(commands.Cog):
     
     @commands.command(name="rates", aliases=["r"])
     async def rates(self, ctx, ign, profile=None):
-        msg = await ctx.send("hi if you are seeing this it Means my owner is being bad at coding")
+        msg = await ctx.send("Fetching data from the API...\n\
+(If this message doesn't update within a few seconds, make sure all your API is on. If it is, then cry about it.)")
         mcuuid = uuid(ign)
         if profile is None:
             request = requests.get(f"https://api.slothpixel.me/api/skyblock/profile/{mcuuid}?key={key}")
@@ -107,7 +108,7 @@ class skyblock(commands.Cog):
             cultivating = 0
         for i in range(cultivating):
             hoe_ff += 1
-   # collection analysis
+    # collection analysis
         if hoe == "THEORETICAL_HOE_WARTS_3":
             try:
                 wart_collection = r["members"][mcuuid]["collection"]["NETHER_STALK"]
@@ -130,8 +131,16 @@ class skyblock(commands.Cog):
             counter = int(log10(counter) + 1) - 4
             hoe_ff += counter * 16
 
+# farming for dummies
+        ffd = 0
+        for i in range(36):
+            try:
+                ffd += r["members"][mcuuid]["inventory"][i]["stats"]["farming_fortune"]
+            except KeyError:
+                ffd += 0
 
-        ff = (farming_level * 4) + (anita * 2) + (pet_level * 1.8) + hoe_ff 
+
+        ff = (farming_level * 4) + (anita * 2) + (pet_level * 1.8) + hoe_ff + ffd 
 
         wart_coins = 3 * (2 * (1 + ff/100))
         wart_coins_per_hour = "{:,.1f}".format(wart_coins * 20 * 60 * 60)
@@ -142,6 +151,7 @@ Fortune from farming skill: {farming_level * 4}\n\
 Fortune from Anita bonus: {anita * 2}\n\
 Fortune from elephant: {pet_level * 1.8}\n\
 Fortune from wart hoe: {hoe_ff}\n\
+Fortune from farming for dummies: {ffd}\n\
 You should be getting {round(wart_coins, 1)} coins from one block of warts.\n\
 Estimated {wart_coins_per_hour} coins per hour from warts!")
 
