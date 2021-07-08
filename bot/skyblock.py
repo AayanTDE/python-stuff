@@ -134,6 +134,7 @@ class skyblock(commands.Cog):
         ff = (farming_level * 4) + (anita * 2) + (pet_level * 1.8) + hoe_ff 
 
         wart_coins = 3 * (2 * (1 + ff/100))
+        wart_coins_per_hour = "{:,.1f}".format(wart_coins * 20 * 60 * 60)
 
 
         await msg.edit(content=f"Total farming fortune: {ff}\n\
@@ -141,7 +142,8 @@ Fortune from farming skill: {farming_level * 4}\n\
 Fortune from Anita bonus: {anita * 2}\n\
 Fortune from elephant: {pet_level * 1.8}\n\
 Fortune from wart hoe: {hoe_ff}\n\
-You should be getting {round(wart_coins, 1)} coins from one block of warts!\n")
+You should be getting {round(wart_coins, 1)} coins from one block of warts.\n\
+Estimated {wart_coins_per_hour} coins per hour from warts!")
 
 def setup(bot: commands.Bot):
     bot.add_cog(skyblock(bot))
