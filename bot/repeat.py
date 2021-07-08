@@ -47,7 +47,9 @@ class repeat(commands.Cog):
 
     @commands.command(name="spam")
     async def spam(self, ctx, arg, count):
-        if ctx.message.author.id in whitelist:
+        if ctx.message.guild.id == 812449183415795712:
+            await ctx.reply("spam has been blacklisted in sandal server because SOMEONE keeps spamming")
+        elif ctx.message.author.id in whitelist:
             if "305299176470872064" in arg:
                 await ctx.send("Please dont ping Jag he's so attractive")
             else:
