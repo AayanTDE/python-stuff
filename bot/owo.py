@@ -1,6 +1,7 @@
 from discord.ext import commands
 
-class owo(commands.Cog):
+
+class Owo(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
@@ -21,4 +22,4 @@ class owo(commands.Cog):
 
 
 def setup(bot: commands.Bot):
-    bot.add_cog(owo(bot))
+    bot.add_cog(Owo(bot))

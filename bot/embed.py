@@ -1,7 +1,7 @@
 import discord, random
 from discord.ext import commands
 
-class embed(commands.Cog):
+class Embed(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
@@ -23,4 +23,4 @@ class embed(commands.Cog):
  
 
 def setup(bot: commands.Bot):
-    bot.add_cog(embed(bot))
+    bot.add_cog(Embed(bot))

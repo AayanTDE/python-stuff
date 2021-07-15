@@ -3,16 +3,17 @@ from discord.ext import commands
 from util.shit import lyrics
 
 blacklist = [
-    466522885536612353 # sigma
+    466522885536612353  # sigma
 ]
 whitelist = [
-    270141848000004097, # me
-    464395887179726850, # sandal
-    412201321148710912, # fwello
-    356434749700571141, # narv
+    270141848000004097,  # me
+    464395887179726850,  # sandal
+    412201321148710912,  # fwello
+    356434749700571141,  # narv
 ]
 
-class repeat(commands.Cog):
+
+class Repeat(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
@@ -21,12 +22,11 @@ class repeat(commands.Cog):
         if ctx.author.id in blacklist:
             return
         await ctx.send(arg)
-    
+
     @commands.command(name="dsay")
     async def dsay(self, ctx, *, arg):
         await ctx.message.delete()
         await ctx.send(arg)
-
 
     @commands.command(name="shout", aliases=["scream", "yell"])
     async def shout(self, ctx, *, arg):
@@ -58,5 +58,6 @@ class repeat(commands.Cog):
         else:
             await ctx.reply("You are not whitelisted to use this command!")
 
+
 def setup(bot: commands.Bot):
-    bot.add_cog(repeat(bot))
+    bot.add_cog(Repeat(bot))

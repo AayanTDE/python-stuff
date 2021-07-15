@@ -2,7 +2,7 @@ import random
 from discord.ext import commands
 
 
-class rand(commands.Cog):
+class Rand(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
@@ -39,4 +39,4 @@ class rand(commands.Cog):
 
 
 def setup(bot: commands.Bot):
-    bot.add_cog(rand(bot))
+    bot.add_cog(Rand(bot))
