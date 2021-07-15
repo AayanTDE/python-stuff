@@ -1,5 +1,6 @@
 from discord.ext import commands
 
+
 def char_to_numb(char):
     if char in "qwertyuiopasdfghjklzxcvbnm":
         return ord(char[0]) - 96
@@ -8,7 +9,8 @@ def char_to_numb(char):
     else:
         return
 
-class rater(commands.Cog):
+
+class Rater(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
@@ -17,10 +19,11 @@ class rater(commands.Cog):
         for i in phrase.lower():
             base += char_to_numb(i)
         return base
+
     @commands.command(name="rateme", aliases=["rate", "rater"])
     async def rateme(self, ctx, *, arg: rate):
         await ctx.reply(f"Your rating is {arg}!")
 
 
 def setup(bot: commands.Bot):
-    bot.add_cog(rater(bot))
+    bot.add_cog(Rater(bot))

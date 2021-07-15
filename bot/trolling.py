@@ -1,7 +1,7 @@
 import random
 from discord.ext import commands
 
-class trolling(commands.Cog):
+class Trolling(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
     @commands.command(name="howmuchtrolling", aliases=["hmt", "trolling", "troll"])
@@ -11,4 +11,4 @@ class trolling(commands.Cog):
 
 
 def setup(bot: commands.Bot):
-    bot.add_cog(trolling(bot))
+    bot.add_cog(Trolling(bot))

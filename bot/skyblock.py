@@ -8,7 +8,7 @@ from util.skill import *
 from util.uuid import uuid 
 
 
-class skyblock(commands.Cog):
+class Skyblock(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
@@ -162,4 +162,4 @@ class skyblock(commands.Cog):
 
 
 def setup(bot: commands.Bot):
-    bot.add_cog(skyblock(bot))
+    bot.add_cog(Skyblock(bot))
